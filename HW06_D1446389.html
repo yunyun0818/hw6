@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="國家漫畫博物館：城市裡的漫畫記憶。從臺中歷史建築到漫畫展覽，介紹參觀重點、照片、影片與地圖資訊。">
+  <meta name="author" content="鐘柏芸">
+  <meta name="date" content="2026-10-22">
+  <title>HW06｜國家漫畫博物館：城市裡的漫畫記憶－鐘柏芸</title>
+  <style>
+    :root {
+      --ink: #272727;
+      --muted: #666;
+      --paper: #fffdf8;
+      --accent: #8f3d2e;
+      --accent-light: #f4e9e3;
+      --line: #ded8cf;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f0ede7;
+      font-family: "Noto Serif TC", "PMingLiU", serif;
+      line-height: 1.9;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    /* hover 提示滑鼠移到連結上；focus-visible 讓鍵盤操作時也能辨識目前位置。 */
+    a:hover { color: #5f241b; text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid #c47b55; outline-offset: 3px; border-radius: 2px; }
+    img, iframe { max-width: 100%; }
+    .page {
+      max-width: 960px;
+      margin: 36px auto;
+      padding: 0 24px;
+    }
+    header {
+      padding: 54px 7% 42px;
+      background: var(--paper);
+      border-top: 7px solid var(--accent);
+      text-align: center;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      letter-spacing: .22em;
+    }
+    h1 {
+      margin: 0 auto 12px;
+      max-width: 760px;
+      font-size: clamp(1.8rem, 4vw, 2.65rem);
+      line-height: 1.4;
+      letter-spacing: .04em;
+    }
+    .subtitle { margin: 0; color: var(--muted); font-size: 1.02rem; }
+    .notice { margin: 16px 0 0; color: #777; font-size: .82rem; }
+    nav {
+      margin-top: 14px;
+      padding: 22px 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+    nav h2 { margin: 0 0 10px; font-size: 1.1rem; }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      margin: 0;
+      padding-left: 20px;
+    }
+    main {
+      margin-top: 14px;
+      padding: 12px clamp(22px, 6%, 64px) 48px;
+      background: var(--paper);
+    }
+    section { padding: 26px 0 30px; border-bottom: 1px solid var(--line); }
+    section:last-child { border-bottom: 0; }
+    h2 {
+      margin: 0 0 18px;
+      padding-left: 14px;
+      border-left: 4px solid var(--accent);
+      font-size: 1.45rem;
+      line-height: 1.5;
+    }
+    h3 { margin: 24px 0 8px; font-size: 1.12rem; }
+    p { margin: 0 0 14px; }
+    li { margin-bottom: 7px; }
+    .key-note {
+      margin: 18px 0;
+      padding: 14px 18px;
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+    }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--line); background: #fff; }
+    caption { padding: 10px; font-weight: bold; }
+    th, td { padding: 12px 14px; border: 1px solid var(--line); text-align: left; }
+    th { background: var(--accent-light); }
+    figure { margin: 16px 0; padding: 22px; background: #f8f4ee; text-align: center; }
+    figure img { display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; }
+    figure img { display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; }
+    figcaption { margin-top: 12px; color: var(--muted); font-size: .9rem; }
+    /* 影片外框以 16:9 比例縮放，讓窄螢幕也不會超出文章寬度。 */
+    .video-frame {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background: #e9e3dc;
+    }
+    .video-frame iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; border: 0;
+    }
+    footer {
+      margin-top: 14px;
+      padding: 24px;
+      background: #292624;
+      color: #f7f2ec;
+      text-align: center;
+      font-size: .9rem;
+    }
+    footer a { color: #f2c9b7; }
+    .back-top { display: inline-block; margin-top: 8px; }
+    @media (max-width: 600px) {
+      .page { margin: 0 auto; padding: 0; }
+      header { padding: 36px 22px 30px; }
+      nav { margin-top: 8px; }
+      main { margin-top: 8px; padding: 8px 22px 30px; }
+      footer { margin-top: 8px; }
+      th, td { padding: 9px; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="page">
+    <header>
+      <!-- 行內 style：微調英文眉標字距，凸顯頁首主題分類。 -->
+      <p class="eyebrow" style="letter-spacing: .24em;">歷史建築 · 漫畫文化 · 城市走讀</p>
+      <h1>國家漫畫博物館：城市裡的漫畫記憶</h1>
+      <p class="subtitle"><strong>從歷史建築到漫畫展覽，一起閱讀台中的文化記憶。</strong></p>
+      <p class="notice">本期焦點：歷史建築與漫畫文化，從景點報導延伸到位置地圖。</p>
+      <!-- 行內 style：以較小字級呈現作者與日期，避免搶過主標題。 -->
+      <p class="notice" style="font-size: .82rem;">作者：鐘柏芸｜報導整理日期：2026 年 10 月 22 日</p>
+      <p class="notice"><em>本文為資料整理型教學報導，非現場採訪紀錄。</em></p>
+    </header>
+
+    <nav aria-label="報導目錄">
+      <h2>報導目錄</h2>
+      <ul>
+        <li><a href="#intro">博物館簡介</a></li>
+        <li><a href="#highlights">建築特色與參觀重點</a></li>
+        <li><a href="#table">空間特色比較表</a></li>
+        <li><a href="#photo">博物館照片</a></li>
+        <li><a href="#video">影音報導</a></li>
+        <li><a href="#map">地圖資訊</a></li>
+        <li><a href="#sources">資料來源</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article aria-label="國家漫畫博物館專題報導">
+        <section id="intro">
+          <h2>一、博物館簡介</h2>
+          <p>國家漫畫博物館位於<strong>臺中市西區</strong>，以漫畫文化為主題，結合歷史建築、文化保存與藝術展示，是認識臺灣漫畫發展的重要文化場域。博物館不僅關注漫畫作品，也讓民眾了解漫畫創作者、作品背後的時代故事，以及漫畫與日常生活之間的關係。</p>
+          <p>博物館所在的建築群具有歷史特色，過去曾作為司法相關機關的宿舍使用。透過修復與再利用，這些老建築有機會以新的方式融入城市生活，從原本的歷史空間轉變為推廣漫畫文化的場所。</p>
+          <p>漫畫結合圖像、文字與故事，可以呈現不同時代的生活樣貌，也能反映社會文化的變化。透過展覽與空間參觀，民眾能從不同角度認識臺灣漫畫，感受漫畫作為藝術表現與文化記錄的價值。</p>
+          <!-- 行內 style：微調提示區圓角，讓重點區塊與正文更容易區分。 -->
+          <div class="key-note" style="border-radius: 4px;">
+            <strong>閱讀重點：</strong>歷史建築、臺灣漫畫、文化保存與藝術展覽。實際開放區域、參觀方式及地址資訊，請以國家漫畫博物館最新官方公告為準。
+          </div>
+        </section>
+
+        <section id="highlights">
+          <h2>二、建築特色與參觀重點</h2>
+          <h3>值得留意的三個特色</h3>
+          <ul>
+            <li><strong>歷史建築：</strong>保留老建築的空間特色，讓參觀者認識建築與城市發展的關係。</li>
+            <li><strong>臺灣漫畫文化：</strong>以漫畫作品及相關文化為主題，呈現臺灣漫畫的發展與多元面貌。</li>
+            <li><strong>文化空間再利用：</strong>讓具有歷史價值的建築轉化為文化場域，連結歷史保存與當代藝術。</li>
+          </ul>
+          <h3>建議參觀順序</h3>
+          <p>以下是本報導規劃的散步建議，並非官方指定路線。</p>
+          <ol>
+            <li>抵達博物館後，先閱讀入口處的導覽資訊，了解場域歷史與當期展覽內容。</li>
+            <li>觀察歷史建築的外觀、門窗與空間配置，留意老建築保存下來的特色。</li>
+            <li>參觀開放中的漫畫主題展覽，認識臺灣漫畫作品、創作者與相關文化。</li>
+            <li>仔細閱讀展覽說明，思考漫畫如何透過圖像和文字記錄生活、表達情感及反映社會。</li>
+          </ol>
+        </section>
+
+        <section id="table">
+          <h2>三、空間特色比較表</h2>
+          <div class="table-wrap">
+            <table>
+              <caption>國家漫畫博物館三項參觀重點比較</caption>
+              <thead>
+                <tr>
+                  <th scope="col">參觀項目</th>
+                  <th scope="col">主要特色</th>
+                  <th scope="col">建議觀察重點</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">歷史建築</th>
+                  <td>具有歷史背景的建築群</td>
+                  <td>建築外觀、門窗設計與空間配置</td>
+                </tr>
+                <tr>
+                  <th scope="row">漫畫展覽</th>
+                  <td>以漫畫作品與漫畫文化為主題</td>
+                  <td>作品內容、圖像表現與故事特色</td>
+                </tr>
+                <tr>
+                  <th scope="row">文化保存</th>
+                  <td>歷史空間與當代文化相互結合</td>
+                  <td>建築再利用與文化傳承的意義</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="photo">
+          <h2>四、國家漫畫博物館照片</h2>
+          <figure>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/46/%E5%9C%8B%E5%AE%B6%E6%BC%AB%E7%95%AB%E5%8D%9A%E7%89%A9%E9%A4%A8%E7%B1%8C%E5%82%99%E8%99%95_%E8%87%BA%E4%B8%AD%E5%88%91%E5%8B%99%E6%89%80%E6%BC%94%E6%AD%A6%E5%A0%B4.jpg"
+              alt="國家漫畫博物館籌備處與臺中刑務所演武場的歷史建築外觀"
+              loading="lazy">
+            <figcaption>
+              國家漫畫博物館籌備處與臺中刑務所演武場的歷史建築外觀。<br>
+              圖片來源：<a href="https://commons.wikimedia.org/wiki/File:%E5%9C%8B%E5%AE%B6%E6%BC%AB%E7%95%AB%E5%8D%9A%E7%89%A9%E9%A4%A8%E7%B1%8C%E5%82%99%E8%99%95_%E8%87%BA%E4%B8%AD%E5%88%91%E5%8B%99%E6%89%80%E6%BC%94%E6%AD%A6%E5%A0%B4.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>（作者：Adece033090，Creative Commons 授權）<br>
+              另可參考：<a href="https://travel.taichung.gov.tw/zh-tw/multimedia/album/7642" target="_blank" rel="noopener noreferrer">臺中市政府觀光旅遊網照片集</a>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="video">
+          <h2>五、影音報導</h2>
+          <p>透過影音介紹認識國家漫畫博物館的建築環境與漫畫文化，再比較影片畫面與本文介紹的參觀重點。</p>
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/CmzBoLuT-VE"
+              title="國家漫畫博物館介紹影片"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <p>若播放器無法播放，請<a href="https://www.youtube.com/watch?v=CmzBoLuT-VE" target="_blank" rel="noopener noreferrer">前往 YouTube 觀看影片（另開分頁）</a>。</p>
+          <p><small>影片是否能播放，仍取決於影片是否存在、發布者的播放設定及網路連線。</small></p>
+        </section>
+
+        
+        <section id="map">
+          <h2>六、地圖資訊</h2>
+          <p>國家漫畫博物館位於臺中市西區。出發前可透過地圖查看位置、規劃交通方式，並確認最新開放資訊。</p>
+          <!-- 行內 style：讓地圖連結呈現為清楚的行動提示，仍可用鍵盤操作。 -->
+          <p><a href="https://www.google.com/maps/search/?api=1&query=國家漫畫博物館%20臺中" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 14px; border: 1px solid #8f3d2e; border-radius: 4px;">在 Google 地圖查看國家漫畫博物館</a></p>
+          <p><small>地圖連結會另開新分頁；實際位置、交通與開放區域請以官方公告及地圖最新資訊為準。</small></p>
+        </section>
+
+        <section id="sources">
+          <h2>七、資料來源</h2>
+          <p>本報導以博物館相關資訊及漫畫文化為主題整理，參觀順序與觀察建議由示範作者規劃。</p>
+          <ul>
+            <li><a href="https://www.nmcm.gov.tw/" target="_blank" rel="noopener noreferrer">國家漫畫博物館官方網站</a></li>
+            <li><a href="https://www.moc.gov.tw/" target="_blank" rel="noopener noreferrer">文化部官方網站</a></li>
+            <li><a href="https://www.tchac.taichung.gov.tw/" target="_blank" rel="noopener noreferrer">臺中市文化資產處官方網站</a></li>
+            <li><a href="https://travel.taichung.gov.tw/zh-tw/multimedia/album/7642" target="_blank" rel="noopener noreferrer">臺中市政府觀光旅遊網－照片資料</a></li>
+          </ul>
+          <p><small>作者：鐘柏芸｜資料整理日期：2026 年 10 月 22 日。</small></p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>國家漫畫博物館專題報導｜作者：鐘柏芸｜2026 年 10 月 22 日</p>
+      <a class="back-top" href="#top">↑ 回到頁首</a>
+    </footer>
+  </div>
+</body>
+</html>
